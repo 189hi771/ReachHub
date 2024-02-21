@@ -207,8 +207,12 @@ ws.OnMessage:Connect(function(message)
         end
     end
 
-    
-local Disable = Instance.new("BindableEvent")
+    end  
+
+    function KillAura(Value)
+
+            -- Defining Funcs
+            local Disable = Instance.new("BindableEvent")
 getgenv().configs = { connections = {}, Disable = Disable, Size = Vector3.new(25, 25, 25), DeathCheck = true }
 
 local Players = cloneref(game:GetService("Players"))
@@ -267,10 +271,7 @@ end
 table.insert(getgenv().configs.connections, Disable.Event:Connect(function()
     Run = false
 end))
-
-    end  
-
-    function KillAura(Value)
+            
         if Value == true then
             while wait() do
             local char = getchar()
