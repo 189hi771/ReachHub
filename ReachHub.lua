@@ -9,6 +9,7 @@ local body = http_request({ Url = 'https://httpbin.org/get', Method = 'GET' }).B
 local decoded = game:GetService('HttpService'):JSONDecode(body)
 local headers = decoded.headers
 local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
+NotifyLib.prompt('ReachHub', 'Beta version v0.1', 1.2)
 
 local function getHWID(headers)
     local hwid
