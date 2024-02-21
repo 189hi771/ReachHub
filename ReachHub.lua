@@ -410,11 +410,7 @@ local Toggle = SwordTab:CreateToggle({
     CurrentValue = false,
     Flag = "ReachToggle",
     Callback = function(Value)
-        if Value == true then
-            Run = true
-        elseif Value == false then
-            Run = false
-        end
+        KillAura(Value)
     end,
 })
 
